@@ -1,11 +1,14 @@
 
 \documentclass[11pt]{article}
 
+\usepackage{amsthm}
 \usepackage{indentfirst}
 \usepackage{natbib}
 \usepackage[colorlinks=true,citecolor=blue,urlcolor=blue]{hyperref}
 \usepackage{doi}
 \usepackage{url}
+
+\newtheorem{theorem}{Theorem}
 
 \begin{document}
 
@@ -16,6 +19,57 @@
 \maketitle
 
 \section{Introduction}
+
+We develop the theory of Poisson approximation and Poisson point processes
+in the context of ``radically elementary probability theory'' \citep{nelson},
+which is based on what \citeauthor{nelson} later dubbed ``minimal'' nonstandard
+analysis \citep{nelson-minimal}, which is based on four axioms
+(\citealp{geyer}, Chapter~2; \citet{nelson}, Chapter~4), which are in turn
+theorems of internal set theory \citep{nelson-bull}, which has been proved
+to be equiconsistent with ZFC set theory (Zermelo-Frankel with the axiom of
+choice).  Thus we are doing mathematics with nonstandard analysis
+(infinitesimals and unlimited numbers, which are reciprocals of infinitesimals)
+in a completely rigorous way.  For more on this, see \citet[Chapter~2]{geyer}.
+
+We are going to develop using radically elementary probability theory,
+the theory of Poisson approximation and Poisson spatial point processes.
+We will see --- that as with many aspects of probability theory --- radically
+elementary probability theory radically simplifies this subject.  It turns
+out that the space in Poisson spatial point processes is irrelevant.
+Our main theorem is the following.
+\begin{theorem} \label{th:main}
+Suppose $T$ is a finite set and $X_t$, $t \in T$ are independent Bernoulli
+random variables with infinitesimal expectation.  Then for any $A \subset T$,
+$\sum_{t \in A} X_t$ has a nearly Poisson distribution.
+\end{theorem}
+Nearly Poisson means the probability of any event agrees with that of the
+Poisson distribution of conventional mathematics up to near equality
+(the difference of the two is infinitesimal).  In order for our theorem
+to be correct, we need to allow Poisson random variables with infinitesimal
+mean (any random variable which is infinitesimal almost surely) and with
+unlimited mean (any random variable which is unlimited almost surely).
+
+Actually, more is true.
+\begin{theorem} \label{th:l-p}
+With the setup of Theorem~\ref{th:main},
+$\sum_{t \in A} X_t$ is $L^p$ for all limited $p$ and moments of all orders
+agree with those of the Poisson distribution of conventional probability
+theory up to infinitesimals.
+\end{theorem}
+For more on the concepts infinitesimal almost surely, unlimited almost surely,
+and $L^p$, see \citet{geyer}, Chapter 6.
+
+Radically elementary probability theory is based on two principles.
+\begin{itemize}
+\item All sample spaces are finite.
+\item All outcomes have positive probability.
+\end{itemize}
+One might think this radical simplification of conventional, measure-theoretic
+probability theory throws out the baby with the bathwater.  But infinitesimals
+and unlimited numbers save the day.  We cannot even define the Poisson
+distribution of conventional mathematics if all sample spaces must be finite.
+But as our theorems say, we make only infinitesimal errors by truncating
+the sample space.
 
 \begin{thebibliography}{}
 
